@@ -40,31 +40,27 @@ class _MenuPageState extends State<MenuPage> {
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     "Bem vindo(a), Usuário",
                     style: TextStyle(fontSize: 24),
                   ),
                 ],
               ),
-              Container(margin: EdgeInsets.fromLTRB(0, 30, 0, 0),child: Center(child: Icon(Icons.person_outline, size: 140))),
               Container(
+                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                child: const Center(
+                  child: Icon(
+                    color: Colors.red,
+                    Icons.person_outline, 
+                    size: 140
+                    
+                    )
+                )
+              ),
+              SizedBox(
                   width: 200,
                   height: 50,
-                  child: ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateColor.resolveWith(
-                              (states) =>
-                                  Color.fromRGBO(243, 0, 0, 1))),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Quadro()));
-                      },
-                      child: Text("QUADRO DE HORÁRIOS"))),
-              Container(
-                  width: 200,
-                  height: 50,
-                  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor: MaterialStateColor.resolveWith(
@@ -72,13 +68,27 @@ class _MenuPageState extends State<MenuPage> {
                                   const Color.fromRGBO(243, 0, 0, 1))),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => MyDados()));
+                            MaterialPageRoute(builder: (context) => const Quadro()));
                       },
-                      child: Text("MEUS DADOS"))),
+                      child: const Text("QUADRO DE HORÁRIOS"))),
+              Container(
+                  width: 200,
+                  height: 50,
+                  margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateColor.resolveWith(
+                              (states) =>
+                                  const Color.fromRGBO(243, 0, 0, 1))),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const MyDados()));
+                      },
+                      child: const Text("MEUS DADOS"))),
                       Container(
                   width: 200,
                   height: 50,
-                  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor: MaterialStateColor.resolveWith(
@@ -86,9 +96,9 @@ class _MenuPageState extends State<MenuPage> {
                                   const Color.fromRGBO(243, 0, 0, 1))),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => NotasPage()));
+                            MaterialPageRoute(builder: (context) => const NotasPage()));
                       },
-                      child: Text("NOTAS E FALTAS"))),
+                      child: const Text("NOTAS E FALTAS"))),
             ],
           ),
         ),

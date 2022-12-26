@@ -1,8 +1,5 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:scroll_list/menu.dart';
-import 'package:scroll_list/notas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,10 +56,10 @@ class _ProjetoState extends State<Projeto> {
     if (ra == raAcess && password == passwordAcess) {
       if (ra == raAcess && password == passwordAcess) {
         showDialog(
-            context: this.context, builder: (context) => const MyAlertOk());
+            context: context, builder: (context) => const MyAlertOk());
       } else {
         showDialog(
-            context: this.context, builder: (context) => const MyAlertFail());
+            context: context, builder: (context) => const MyAlertFail());
       }
     }
   }
@@ -71,65 +68,63 @@ class _ProjetoState extends State<Projeto> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(243, 0, 0, 1),
-      body: Container(
-        child: Center(
-            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <
-                Widget>[
-          Container(
-              width: 350,
-              height: 500,
-              decoration: const BoxDecoration(color: Colors.white),
-              child: Column(
-                children: [
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    SizedBox(
-                        width: 100,
-                        child: Image.asset("lib/img/logored.png",
-                            fit: BoxFit.fitWidth)),
-                    const Text("Acesso aluno"),
-                  ]),
-                  Container(
-                    margin: const EdgeInsets.only(top: 100, right: 20),
-                    padding: const EdgeInsets.only(
-                      left: 30,
+      body: Center(
+          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <
+              Widget>[
+        Container(
+            width: 350,
+            height: 500,
+            decoration: const BoxDecoration(color: Colors.white),
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  SizedBox(
+                      width: 100,
+                      child: Image.asset("lib/img/logored.png",
+                          fit: BoxFit.fitWidth)),
+                  const Text("Acesso aluno"),
+                ]),
+                Container(
+                  margin: const EdgeInsets.only(top: 100, right: 20),
+                  padding: const EdgeInsets.only(
+                    left: 30,
+                  ),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "RA",
+                      helperText: _raFill,
                     ),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "RA",
-                        helperText: _raFill,
+                    controller: _ctrlRa,
+                  ),
+                ),
+                Container(
+                  margin:
+                      const EdgeInsets.only(top: 20, right: 20, bottom: 20),
+                  padding: const EdgeInsets.only(left: 30),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        helperText: _passFill, hintText: "Senha"),
+                    controller: _ctrlSenha,
+                  ),
+                ),
+                ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateColor.resolveWith(
+                            (states) => const Color.fromRGBO(243, 0, 0, 1))),
+                    onPressed: () {
+                      _validaLogin(_ctrlRa.text, _ctrlSenha.text);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      width: 200,
+                      child: const Text(
+                        "Entrar",
+                        textAlign: TextAlign.center,
                       ),
-                      controller: _ctrlRa,
-                    ),
-                  ),
-                  Container(
-                    margin:
-                        const EdgeInsets.only(top: 20, right: 20, bottom: 20),
-                    padding: const EdgeInsets.only(left: 30),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          helperText: _passFill, hintText: "Senha"),
-                      controller: _ctrlSenha,
-                    ),
-                  ),
-                  ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateColor.resolveWith(
-                              (states) => const Color.fromRGBO(243, 0, 0, 1))),
-                      onPressed: () {
-                        _validaLogin(_ctrlRa.text, _ctrlSenha.text);
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        width: 200,
-                        child: const Text(
-                          "Entrar",
-                          textAlign: TextAlign.center,
-                        ),
-                      ))
-                ],
-              ))
-        ])),
-      ),
+                    ))
+              ],
+            ))
+      ])),
     );
   }
 }
@@ -143,7 +138,7 @@ class MyAlertOk extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       content: const Text("Login Feito com sucesso!"),
-      title: Icon(Icons.person, color: Colors.red, size: 50),
+      title: const Icon(Icons.person, color: Colors.red, size: 50),
       actions: <Widget>[
         ElevatedButton(
             style: ButtonStyle(

@@ -1,10 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class MyDados extends StatelessWidget {
   const MyDados({super.key});
@@ -18,9 +12,9 @@ class MyDados extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back)),
+            icon: const Icon(Icons.arrow_back)),
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(243, 0, 0, 1),
+        backgroundColor: const Color.fromRGBO(243, 0, 0, 1),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -32,7 +26,7 @@ class MyDados extends StatelessWidget {
         ),
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: Column(
           children: [
             Container(
@@ -40,7 +34,7 @@ class MyDados extends StatelessWidget {
                   color: Colors.red,
                   border: Border.all(width: 0.5),
                   borderRadius:
-                      BorderRadius.vertical(top: Radius.circular(10))),
+                      const BorderRadius.vertical(top: Radius.circular(10))),
               child: Padding(
                 padding: const EdgeInsets.all(15),
                 child: Table(
@@ -52,17 +46,18 @@ class MyDados extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white)),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+                                color: Colors.white
+                            )
+                          )
+                      ]
+                    )
+                  ]
+                )
+              )
             ),
             Container(
               decoration: BoxDecoration(
-                // ignore: prefer_const_literals_to_create_immutables
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 2, offset: Offset(0, 3), color: Colors.grey)
                 ],
@@ -84,23 +79,22 @@ class MyDados extends StatelessWidget {
                                   children: [
                                     RichText(
                                       textAlign: TextAlign.center,
-                                      text: TextSpan(
+                                      text: const TextSpan(
                                         text: "Registro Acadêmico                    ",
-                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: <TextSpan>[
                                           TextSpan(
                                             text: "10202190882",
                                             style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
+                                            )
+                                          )
+                                        ]
+                                      )
+                                    )
+                                  ]
+                                )
+                              )
+                            )
                           ],
                           rows: <DataRow>[
                             DataRow(
@@ -120,24 +114,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Nome                                              ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Felipe Machado da Silva",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -156,24 +149,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Data de Nascimento                   ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "10/02/2000",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -192,24 +184,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Naturalidade                                ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Porto Alegre",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -228,24 +219,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Endereço                                      ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Rua Ricardo Barbosa de Oliveira",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -264,24 +254,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Bairro                                            ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Maringá",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -300,24 +289,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Cidade/UF                                   ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Alvorada",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -336,24 +324,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "País                                              ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Brasil",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -372,24 +359,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "E-mail                                           ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "felipe.silva@qi.edu.br",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -408,24 +394,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Telefone                                   ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "(51) 99999-9999",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -444,24 +429,23 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Responsável Financeiro            ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "Felipe Machado",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
                             ),
                             DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
@@ -480,36 +464,33 @@ class MyDados extends StatelessWidget {
                                     children: [
                                       RichText(
                                         textAlign: TextAlign.center,
-                                        text: TextSpan(
+                                        text: const TextSpan(
                                           text:
                                               "Telefone/Responsável               ",
-                                          // ignore: prefer_const_literals_to_create_immutables
                                           children: <TextSpan>[
                                             TextSpan(
                                               text: "(51) 99999-9999",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      )
+                                    ]
+                                  )
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      )
+                    )]
+                )
+              )
+            )]
+        )
+      )
     );
   }
 }

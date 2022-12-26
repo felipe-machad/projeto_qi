@@ -1,9 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:scroll_list/menu.dart';
-import 'meus_dados.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -38,9 +33,9 @@ class _QuadroState extends State<Quadro> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back)),
+            icon: const Icon(Icons.arrow_back)),
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(243, 0, 0, 1),
+        backgroundColor: const Color.fromRGBO(243, 0, 0, 1),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -52,7 +47,7 @@ class _QuadroState extends State<Quadro> {
         ),
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: Column(
           children: [
             Container(
@@ -60,27 +55,27 @@ class _QuadroState extends State<Quadro> {
                   color: Colors.red,
                   border: Border.all(width: 0.5),
                   borderRadius:
-                      BorderRadius.vertical(top: Radius.circular(10))),
+                      const BorderRadius.vertical(top: Radius.circular(10))),
               child: Padding(
                 padding: const EdgeInsets.all(15),
                 child: Table(
-                  children: [
+                  children: const [
                     TableRow(children: [
-                      Text("Quadro de horários - Desenvolvimento de app I",
+                      Text("Quadro de Horários - Desenvolvimento de Aplicativos I",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white))
-                    ]),
-                  ],
-                ),
-              ),
+                    ])
+                  ]
+                )
+              )
             ),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 5,
                       color: Colors.grey,
@@ -88,10 +83,10 @@ class _QuadroState extends State<Quadro> {
                 ],
               ),
               child: Table(
-                border: TableBorder(
+                border: const TableBorder(
                     horizontalInside: BorderSide(width: 1),
                     verticalInside: BorderSide(width: 1)),
-                children: [
+                children: const [
                   TableRow(children: [
                     Text("Segunda-feira", textAlign: TextAlign.center),
                     Text("19:00 até 20:30", textAlign: TextAlign.center),
@@ -121,31 +116,32 @@ class _QuadroState extends State<Quadro> {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               decoration: BoxDecoration(
                   color: Colors.red,
                   border: Border.all(width: 0.5),
                   borderRadius:
-                      BorderRadius.vertical(top: Radius.circular(10))),
+                    const BorderRadius.vertical(top: Radius.circular(10))),
               child: Padding(
                 padding: const EdgeInsets.all(15),
-                child: Table(
-                  children: [
-                    TableRow(children: [
-                      Text("Disciplinas",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                  child: Table(
+                    children: const [
+                      TableRow(
+                        children: [
+                          Text("Disciplinas",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white))
-                    ]),
-                  ],
-                ),
-              ),
+                              color: Colors.white)
+                          )]
+                      )]
+                  )
+                )
             ),
             Container(
               decoration: BoxDecoration(
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 2, offset: Offset(0, 3), color: Colors.grey)
                 ],
@@ -167,10 +163,10 @@ class _QuadroState extends State<Quadro> {
                                   textAlign: TextAlign.center,
                                   text: TextSpan(
                                       text:
-                                          "Boas vindas - Informática para internet \n",
+                                          "Boas Vindas - Informática para Internet \n",
                                       children: <TextSpan>[
                                         TextSpan(
-                                          text: "01/01/2022 até 01/03/2022",
+                                          text: "30/01/2022 até 30/01/2022",
                                           style: TextStyle(
                                             color: Colors.grey[600],
                                             fontStyle: FontStyle.italic,
@@ -198,7 +194,7 @@ class _QuadroState extends State<Quadro> {
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
                                         text:
-                                            "Desenvolvimento de aplicativos I \n",
+                                            "Desenvolvimento de Aplicativos I \n",
                                         children: <TextSpan>[
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -229,19 +225,22 @@ class _QuadroState extends State<Quadro> {
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
                                         text:
-                                            "Desenvolvimento de aplicativos II \n",
+                                            "Desenvolvimento de Aplicativos II \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
                                             style: TextStyle(
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w300),
+                                                fontWeight: FontWeight.w300
+                                                )
+                                          )]
                                           )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
+                                  )
+                                )
+                                )
+                              ]
+                          ),
                           DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
                                   (Set<MaterialState> states) {
@@ -259,19 +258,22 @@ class _QuadroState extends State<Quadro> {
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
                                         text:
-                                            "Desenvolvimento de sistemas web I \n",
+                                            "Desenvolvimento de Sistemas Web I \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
                                             style: TextStyle(
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w100),
+                                                fontWeight: FontWeight.w100
+                                                )
+                                          )]
                                           )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
+                                  )
+                                )
+                                )
+                              ]
+                          ),
                           DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
                                   (Set<MaterialState> states) {
@@ -289,19 +291,22 @@ class _QuadroState extends State<Quadro> {
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
                                         text:
-                                            "Desenvolvimento de sistemas web II \n",
+                                            "Desenvolvimento de Sistemas Web II \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
                                             style: TextStyle(
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w300),
+                                                fontWeight: FontWeight.w300
+                                                )
+                                          )]
                                           )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
+                                  )
+                                )
+                                )
+                              ]
+                          ),
                           DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
                                   (Set<MaterialState> states) {
@@ -319,7 +324,7 @@ class _QuadroState extends State<Quadro> {
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
                                         text:
-                                            "Desenvolvimento de sistemas web III \n",
+                                            "Desenvolvimento de Sistemas Web III \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -327,11 +332,13 @@ class _QuadroState extends State<Quadro> {
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
                                                 fontWeight: FontWeight.w300),
-                                          )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
+                                          )]
+                                      )
+                                  )
+                                )
+                              )
+                              ]
+                          ),
                           DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
                                   (Set<MaterialState> states) {
@@ -342,25 +349,31 @@ class _QuadroState extends State<Quadro> {
                                       .withOpacity(0.08);
                                 }
                                 return Colors.white; // Use the default value.
-                              }),
+                              }
+                              ),
                               cells: <DataCell>[
-                                DataCell(Center(
-                                  child: RichText(
-                                    textAlign: TextAlign.center,
-                                    text: TextSpan(
-                                        text: "Internet das coisas \n",
-                                        children: [
-                                          TextSpan(
-                                            text: "01/01/2022 até 01/03/2022",
-                                            style: TextStyle(
+                                DataCell(
+                                  Center(
+                                    child: RichText(
+                                      textAlign: TextAlign.center,
+                                      text: TextSpan(
+                                          text: "Internet das coisas \n",
+                                          children: [
+                                            TextSpan(
+                                              text: "01/01/2022 até 01/03/2022",
+                                              style: TextStyle(
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w300),
+                                                fontWeight: FontWeight.w300
+                                                )
                                           )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
+                                        ]
+                                      )
+                                  )
+                                  )
+                                )
+                              ]
+                          ),
                           DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
                                   (Set<MaterialState> states) {
@@ -385,12 +398,15 @@ class _QuadroState extends State<Quadro> {
                                             style: TextStyle(
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w300),
-                                          )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
+                                                fontWeight: FontWeight.w300
+                                            )
+                                          )]
+                                      )
+                                    )
+                                  )
+                                )
+                              ]
+                          ),
                           DataRow(
                               color: MaterialStateProperty.resolveWith<Color?>(
                                   (Set<MaterialState> states) {
@@ -415,91 +431,23 @@ class _QuadroState extends State<Quadro> {
                                             style: TextStyle(
                                                 color: Colors.grey[600],
                                                 fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w300),
-                                          )
-                                        ]),
-                                  ),
-                                )),
-                              ]),
-                          DataRow(
-                              color: MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
-                                if (states.contains(MaterialState.selected)) {
-                                  return Theme.of(context)
-                                      .colorScheme
-                                      .primary
-                                      .withOpacity(0.08);
-                                }
-                                return Colors.white; // Use the default value.
-                              }),
-                              cells: <DataCell>[
-                                DataCell(Center(
-                                  child: RichText(
-                                    textAlign: TextAlign.center,
-                                    text: TextSpan(text: "TESTE \n", children: [
-                                      TextSpan(
-                                        text: "01/01/2022 até 01/03/2022",
-                                        style: TextStyle(
-                                            color: Colors.grey[600],
-                                            fontStyle: FontStyle.italic,
-                                            fontWeight: FontWeight.w300),
+                                                fontWeight: FontWeight.w300)
+                                          )]
                                       )
-                                    ]),
-                                  ),
-                                )),
-                              ]),
-                          DataRow(
-                              color: MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
-                                if (states.contains(MaterialState.selected)) {
-                                  return Theme.of(context)
-                                      .colorScheme
-                                      .primary
-                                      .withOpacity(0.08);
-                                }
-                                return Colors.white; // Use the default value.
-                              }),
-                              cells: <DataCell>[
-                                DataCell(ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) => MyDados()));
-                                    },
-                                    child: Text("Quadro de horarios"))),
-                              ]),
-                          DataRow(
-                              color: MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
-                                if (states.contains(MaterialState.selected)) {
-                                  return Theme.of(context)
-                                      .colorScheme
-                                      .primary
-                                      .withOpacity(0.08);
-                                }
-                                return Colors.white; // Use the default value.
-                              }),
-                              cells: <DataCell>[
-                                DataCell(ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) => MenuPage()));
-                                    },
-                                    child: Text("Menu de telas"))),
-                              ]),
-                        ]),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+                                  )
+                                )
+                              )
+                            ]
+                          )  
+                        ]
+                      )
+                      )
+                    )]
+                )
+              )
+            )]
+        )
+      )
     );
   }
 }
