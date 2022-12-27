@@ -28,8 +28,8 @@ class _ProjetoState extends State<Projeto> {
   final TextEditingController _ctrlRa = TextEditingController();
   final TextEditingController _ctrlSenha = TextEditingController();
 
-  String ra = "1234";
-  String password = "12345";
+  String ra = "1";
+  String password = "1";
   String _raFill = "";
   String _passFill = "";
 
