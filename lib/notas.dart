@@ -31,7 +31,7 @@ class _NotasPageState extends State<NotasPage> {
         ),
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: Column(
           children: [
             Container(
@@ -39,7 +39,7 @@ class _NotasPageState extends State<NotasPage> {
                   color: Colors.red,
                   border: Border.all(width: 0.5),
                   borderRadius:
-                      BorderRadius.vertical(top: Radius.circular(10))),
+                      const BorderRadius.vertical(top: Radius.circular(10))),
               child: Padding(
                 padding: const EdgeInsets.all(15),
                 child: Table(
@@ -51,17 +51,17 @@ class _NotasPageState extends State<NotasPage> {
                             style: TextStyle(
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white)),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+                                color: Colors.white)
+                                ),
+                      ]
+                    )
+                  ]
+                )
+              )
             ),
             Container(
               decoration: BoxDecoration(
-                // ignore: prefer_const_literals_to_create_immutables
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 2, offset: Offset(0, 3), color: Colors.grey)
                 ],
@@ -76,35 +76,29 @@ class _NotasPageState extends State<NotasPage> {
                     Expanded(
                       child: SingleChildScrollView(
                         child: Column(
-                          children: [
+                          children: const [
                             Center(
                               child: DropdownButtonExample()
-                            ),
-                          ],
+                            )
+                          ]
                         )
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+                      )
+                    )
+                  ]
+                )
+              )
+            )
+          ]
+        )
+      )
     );
   }
 }
 
 
-const List<String> list = <String>['Boas vindas - Informática para internet',
- 'Análise e qualidade de software',
- 'Desenvolvimento de aplicativos I',
-  'Desenvolvimento de aplicativos II',
-  'Desenvolvimento de sistemas web I',
-  'Desenvolvimento de sistemas web II',
-  'Desenvolvimento de sistemas web III',
-  'Internet das coisas',
-  'Sistemas operacionais e redes'
+const List<String> list = <String>[
+  'Selecione seu curso',
+  'Técnico de Infomatica para Internet Semipresenscial',
   ];
 
 class DropdownButtonApp extends StatelessWidget {
@@ -117,8 +111,8 @@ class DropdownButtonApp extends StatelessWidget {
         appBar: AppBar(title: const Text('DropdownButton Sample')),
         body: const Center(
           child: DropdownButtonExample(),
-        ),
-      ),
+        )
+      )
     );
   }
 }

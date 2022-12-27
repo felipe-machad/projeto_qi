@@ -28,10 +28,9 @@ class _MenuPageState extends State<MenuPage> {
           children: [
             Image.asset(
               "lib/img/logo_qi.png",
-              scale: 2,
-            ),
-          ],
-        ),
+              scale: 2
+            )]
+        )
       ),
       body: Container(
         margin: const EdgeInsets.all(20),
@@ -44,8 +43,7 @@ class _MenuPageState extends State<MenuPage> {
                   Text(
                     "Bem vindo(a), Usuário",
                     style: TextStyle(fontSize: 24),
-                  ),
-                ],
+                  )]
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
@@ -70,7 +68,8 @@ class _MenuPageState extends State<MenuPage> {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => const Quadro()));
                       },
-                      child: const Text("QUADRO DE HORÁRIOS"))),
+                      child: const Text("QUADRO DE HORÁRIOS"))
+                      ),
               Container(
                   width: 200,
                   height: 50,
@@ -82,10 +81,12 @@ class _MenuPageState extends State<MenuPage> {
                                   const Color.fromRGBO(243, 0, 0, 1))),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const MyDados()));
+                            MaterialPageRoute(
+                              builder: (context) => const MyDados()));
                       },
-                      child: const Text("MEUS DADOS"))),
-                      Container(
+                      child: const Text("MEUS DADOS"))
+                      ),
+              Container(
                   width: 200,
                   height: 50,
                   margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
@@ -98,11 +99,11 @@ class _MenuPageState extends State<MenuPage> {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => const NotasPage()));
                       },
-                      child: const Text("NOTAS E FALTAS"))),
-            ],
-          ),
-        ),
-      ),
+                      child: const Text("NOTAS E FALTAS"))
+                      )]
+          )
+        )
+      )
     );
   }
 }

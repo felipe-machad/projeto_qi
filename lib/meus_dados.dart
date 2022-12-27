@@ -48,7 +48,7 @@ class MyDados extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white
                             )
-                          )
+                        )
                       ]
                     )
                   ]
@@ -90,8 +90,7 @@ class MyDados extends StatelessWidget {
                                           )
                                         ]
                                       )
-                                    )
-                                  ]
+                                    )]
                                 )
                               )
                             )
@@ -126,8 +125,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -161,8 +159,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      ) ]
                                   )
                                 )
                               ]
@@ -196,8 +193,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -231,8 +227,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -266,8 +261,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -476,8 +470,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]

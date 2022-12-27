@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_list/menu.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -81,8 +80,9 @@ class _ProjetoState extends State<Projeto> {
                   SizedBox(
                       width: 100,
                       child: Image.asset("lib/img/logored.png",
-                          fit: BoxFit.fitWidth)),
-                  const Text("Acesso aluno"),
+                          fit: BoxFit.fitWidth)
+                    ),
+                  const Text("Acesso aluno")
                 ]),
                 Container(
                   margin: const EdgeInsets.only(top: 100, right: 20),
@@ -92,10 +92,10 @@ class _ProjetoState extends State<Projeto> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       hintText: "RA",
-                      helperText: _raFill,
+                      helperText: _raFill
                     ),
-                    controller: _ctrlRa,
-                  ),
+                    controller: _ctrlRa
+                  )
                 ),
                 Container(
                   margin:
@@ -119,17 +119,18 @@ class _ProjetoState extends State<Projeto> {
                       width: 200,
                       child: const Text(
                         "Entrar",
-                        textAlign: TextAlign.center,
-                      ),
-                    ))
-              ],
-            ))
-      ])),
+                        textAlign: TextAlign.center)
+                    )
+                )
+              ]
+              )
+            )
+          ]
+        )
+      ),
     );
   }
 }
-
-/////
 /////////////////////////////////////////////////////////////////
 class MyAlertOk extends StatelessWidget {
   const MyAlertOk({Key? key}) : super(key: key);
