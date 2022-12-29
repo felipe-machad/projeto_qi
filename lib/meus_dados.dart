@@ -16,19 +16,21 @@ class MyDados extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(243, 0, 0, 1),
         title: Row(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               "lib/img/logo_qi.png",
               scale: 2,
-            ),
-          ],
-        ),
+            )
+          ]
+        )
       ),
       body: Container(
         margin: const EdgeInsets.all(20),
         child: Column(
           children: [
+           
             Container(
               decoration: BoxDecoration(
                   color: Colors.red,
@@ -55,6 +57,7 @@ class MyDados extends StatelessWidget {
                 )
               )
             ),
+     
             Container(
               decoration: BoxDecoration(
                 boxShadow: const [
@@ -68,7 +71,7 @@ class MyDados extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.6,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     Expanded(
                       child: SingleChildScrollView(
                         child: DataTable(
@@ -478,10 +481,23 @@ class MyDados extends StatelessWidget {
                           ]
                         )
                       )
-                    )]
+                    ),
+                  ]
                 )
               )
-            )]
+            ),  
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              child: const Text(
+                "Caso algum de seus dados estejam preenchidos de forma incorreta, \n entrar em contato com a secretaria de sua escola",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold
+              ),
+              )
+            )
+            ]
         )
       )
     );
