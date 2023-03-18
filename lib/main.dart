@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
         home: const Projeto());
   }
 }
-
 class Projeto extends StatefulWidget {
   const Projeto({Key? key}) : super(key: key);
 

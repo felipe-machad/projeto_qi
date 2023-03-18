@@ -419,25 +419,27 @@ class _QuadroState extends State<Quadro> {
                                 return Colors.white; // Use the default value.
                               }),
                               cells: <DataCell>[
-                                DataCell(Center(
-                                  child: RichText(
-                                    textAlign: TextAlign.center,
-                                    text: TextSpan(
-                                        text:
-                                            "Análise e qualidade de software \n",
-                                        children: [
-                                          TextSpan(
-                                            text: "01/01/2022 até 01/03/2022",
-                                            style: TextStyle(
-                                                color: Colors.grey[600],
-                                                fontStyle: FontStyle.italic,
-                                                fontWeight: FontWeight.w300)
-                                          )]
-                                      )
+                                DataCell(
+                                  Center(
+                                    child: RichText(
+                                      textAlign: TextAlign.center,
+                                      text: TextSpan(
+                                          text:
+                                              "Análise e qualidade de software \n",
+                                          children: [
+                                            TextSpan(
+                                              text: "01/01/2022 até 01/03/2022",
+                                              style: TextStyle(
+                                                  color: Colors.grey[600],
+                                                  fontStyle: FontStyle.italic,
+                                                  fontWeight: FontWeight.w300
+                                              )
+                                            )]
+                                        )
+                                    )
                                   )
                                 )
-                              )
-                            ]
+                              ]
                           )  
                         ]
                       )

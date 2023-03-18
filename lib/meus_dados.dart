@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class MyDados extends StatelessWidget {
   const MyDados({super.key});
 
@@ -22,15 +21,13 @@ class MyDados extends StatelessWidget {
             Image.asset(
               "lib/img/logo_qi.png",
               scale: 2,
-            )
-          ]
+            )]
         )
       ),
       body: Container(
         margin: const EdgeInsets.all(20),
         child: Column(
           children: [
-           
             Container(
               decoration: BoxDecoration(
                   color: Colors.red,
@@ -50,14 +47,11 @@ class MyDados extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white
                             )
-                        )
-                      ]
-                    )
-                  ]
+                        )]
+                    )]
                 )
               )
             ),
-     
             Container(
               decoration: BoxDecoration(
                 boxShadow: const [
@@ -162,7 +156,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      ) ]
+                                      )]
                                   )
                                 )
                               ]
@@ -223,7 +217,7 @@ class MyDados extends StatelessWidget {
                                               "Endereço                                      ",
                                           children: <TextSpan>[
                                             TextSpan(
-                                              text: "Rua Ricardo Barbosa de Oliveira",
+                                              text: "Ricardo Barbosa de Oliveira",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                               )
@@ -298,8 +292,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -333,8 +326,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -368,8 +360,7 @@ class MyDados extends StatelessWidget {
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -398,13 +389,13 @@ class MyDados extends StatelessWidget {
                                             TextSpan(
                                               text: "(51) 99999-9999",
                                               style: TextStyle(
+                                                fontFamily:"" ,
                                                 fontWeight: FontWeight.bold,
                                               )
                                             )
                                           ]
                                         )
-                                      )
-                                    ]
+                                      )]
                                   )
                                 )
                               ]
@@ -423,23 +414,17 @@ class MyDados extends StatelessWidget {
                               cells: <DataCell>[
                                 DataCell(
                                   Row(
-                                    children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: const TextSpan(
-                                          text:
-                                              "Responsável Financeiro            ",
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Felipe Machado",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              )
-                                            )
-                                          ]
-                                        )
-                                      )
-                                    ]
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: const [
+                                      Text(
+                                        "Responsável Financeiro",
+                                      ),
+                                      Text(
+                                        "Felipe Machado",
+                                        style: TextStyle(
+                                          fontStyle: FontStyle.italic,
+                                          fontWeight: FontWeight.bold),
+                                      )]
                                   )
                                 )
                               ]
@@ -468,7 +453,7 @@ class MyDados extends StatelessWidget {
                                             TextSpan(
                                               text: "(51) 99999-9999",
                                               style: TextStyle(
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.bold
                                               )
                                             )
                                           ]
@@ -481,7 +466,7 @@ class MyDados extends StatelessWidget {
                           ]
                         )
                       )
-                    ),
+                    )
                   ]
                 )
               )
@@ -490,14 +475,14 @@ class MyDados extends StatelessWidget {
               margin: const EdgeInsets.only(top: 20),
               child: const Text(
                 "Caso algum de seus dados estejam preenchidos de forma incorreta, \n entrar em contato com a secretaria de sua escola",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold
-              ),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold
+                )
               )
-            )
-            ]
+            )]
         )
       )
     );

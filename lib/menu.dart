@@ -9,7 +9,6 @@ class MenuPage extends StatefulWidget {
   @override
   State<MenuPage> createState() => _MenuPageState();
 }
-
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
