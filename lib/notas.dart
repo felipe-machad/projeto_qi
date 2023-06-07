@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_list/meus_dados.dart';
+import 'package:scroll_list/quadro.dart';
 
 class NotasPage extends StatefulWidget {
   const NotasPage({super.key});
@@ -51,18 +53,18 @@ class _NotasPageState extends State<NotasPage> {
                             style: TextStyle(
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white)
-                                ),
-                      ]
-                    )
-                  ]
-                )
-              )
+                                color: Colors.white)),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
             Container(
               decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
+                // ignore: prefer_const_literals_to_create_immutables
+                boxShadow: [
+                  const BoxShadow(
                       blurRadius: 2, offset: Offset(0, 3), color: Colors.grey)
                 ],
                 border: Border.all(),
@@ -71,35 +73,38 @@ class _NotasPageState extends State<NotasPage> {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.6,
-                child: Column(
+                child: const Column(
                   children: [
                     Expanded(
                       child: SingleChildScrollView(
-                        child: Column(
-                          children: const [
-                            Center(
-                              child: DropdownButtonExample()
-                            )
-                          ]
-                        )
-                      )
-                    )
-                  ]
-                )
-              )
-            )
-          ]
-        )
-      )
+                          child: Column(
+                        children: [
+                          Center(child: DropdownButtonExample()),
+                        ],
+                      )),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
 
-
 const List<String> list = <String>[
-  'Selecione seu curso',
-  'Técnico de Infomatica para Internet Semipresenscial',
-  ];
+  'Boas vindas - Informática para internet',
+  'Análise e qualidade de software',
+  'Desenvolvimento de aplicativos I',
+  'Desenvolvimento de aplicativos II',
+  'Desenvolvimento de sistemas web I',
+  'Desenvolvimento de sistemas web II',
+  'Desenvolvimento de sistemas web III',
+  'Internet das coisas',
+  'Sistemas operacionais e redes'
+];
 
 class DropdownButtonApp extends StatelessWidget {
   const DropdownButtonApp({super.key});
@@ -111,8 +116,8 @@ class DropdownButtonApp extends StatelessWidget {
         appBar: AppBar(title: const Text('DropdownButton Sample')),
         body: const Center(
           child: DropdownButtonExample(),
-        )
-      )
+        ),
+      ),
     );
   }
 }

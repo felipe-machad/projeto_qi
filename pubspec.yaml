@@ -65,6 +65,7 @@ flutter:
   assets:
     - lib/img/logo_qi.png
     - lib/img/logored.png
+    - lib/img/man.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
