@@ -1,8 +1,8 @@
-import 'dart:js';
+
 
 import 'package:flutter/material.dart';
 import 'package:scroll_list/menu.dart';
-import 'package:scroll_list/notas.dart';
+
 
 void main() {
   runApp(const MyApp());

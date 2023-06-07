@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scroll_list/meus_dados.dart';
-import 'package:scroll_list/quadro.dart';
+
 
 class NotasPage extends StatefulWidget {
   const NotasPage({super.key});
