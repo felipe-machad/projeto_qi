@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class NotasPage extends StatefulWidget {
   const NotasPage({super.key});
 
@@ -50,6 +49,13 @@ class _NotasPageState extends State<NotasPage> {
                         Text("Notas e Faltas",
                             textAlign: TextAlign.center,
                             style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    color: Colors.black,
+                                    blurRadius: 2.0,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white)),

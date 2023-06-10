@@ -1,8 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:scroll_list/menu.dart';
-
+import 'model/person_.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,39 +29,27 @@ class Projeto extends StatefulWidget {
 class _ProjetoState extends State<Projeto> {
   final TextEditingController _ctrlRa = TextEditingController();
   final TextEditingController _ctrlSenha = TextEditingController();
+  final person = Person(ra: "1", password: "1");
 
-  String ra = "1234";
-  String password = "12345";
   String _raFill = "";
   String _passFill = "";
 
   void _validaLogin(String raAcess, String passwordAcess) {
-    if (_ctrlRa.text.isEmpty) {
-      setState(() {
-        _raFill = "Preencha esse campo";
-      });
+    setState(() {
+      _raFill = _ctrlRa.text.isEmpty ? "Preencha esse campo" : "";
+      _passFill = _ctrlSenha.text.isEmpty ? "Preencha esse campo" : "";
+    });
+
+    if (person.ra == raAcess && person.password == passwordAcess) {
+      showDialog(
+        context: context,
+        builder: (context) => const MyAlertOk(),
+      );
     } else {
-      setState(() {
-        _raFill = "";
-      });
-    }
-    if (_ctrlSenha.text.isEmpty) {
-      setState(() {
-        _passFill = "Preencha esse campo";
-      });
-    } else {
-      setState(() {
-        _passFill = "";
-      });
-    }
-    if (ra == raAcess && password == passwordAcess) {
-      if (ra == raAcess && password == passwordAcess) {
-        showDialog(
-            context: this.context, builder: (context) => const MyAlertOk());
-      } else {
-        showDialog(
-            context: this.context, builder: (context) => const MyAlertFail());
-      }
+      showDialog(
+        context: context,
+        builder: (context) => const MyAlertFail(),
+      );
     }
   }
 
@@ -89,28 +75,24 @@ class _ProjetoState extends State<Projeto> {
                       const Text("Acesso aluno"),
                     ]),
                     Container(
-                      margin: const EdgeInsets.only(top: 100, right: 20),
-                      padding: const EdgeInsets.only(
-                        left: 30,
-                      ),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          hintText: "RA",
-                          helperText: _raFill,
-                        ),
-                        controller: _ctrlRa,
-                      ),
-                    ),
+                        margin: const EdgeInsets.only(top: 100, right: 20),
+                        padding: const EdgeInsets.only(left: 30),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "RA",
+                            helperText: _raFill,
+                          ),
+                          controller: _ctrlRa,
+                        )),
                     Container(
-                      margin:
-                          const EdgeInsets.only(top: 20, right: 20, bottom: 20),
-                      padding: const EdgeInsets.only(left: 30),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                            helperText: _passFill, hintText: "Sensha"),
-                        controller: _ctrlSenha,
-                      ),
-                    ),
+                        margin: const EdgeInsets.only(
+                            top: 20, right: 20, bottom: 20),
+                        padding: const EdgeInsets.only(left: 30),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              helperText: _passFill, hintText: "Senha"),
+                          controller: _ctrlSenha,
+                        )),
                     ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor: MaterialStateColor.resolveWith(
@@ -134,8 +116,6 @@ class _ProjetoState extends State<Projeto> {
   }
 }
 
-/////
-/////////////////////////////////////////////////////////////////
 class MyAlertOk extends StatelessWidget {
   const MyAlertOk({Key? key}) : super(key: key);
 
@@ -150,6 +130,8 @@ class MyAlertOk extends StatelessWidget {
                 backgroundColor: MaterialStateColor.resolveWith(
                     (states) => const Color.fromRGBO(243, 0, 0, 1))),
             onPressed: () {
+              Navigator.of(context).pop();
+
               //seremos direcionados para outra tela
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const MenuPage()));

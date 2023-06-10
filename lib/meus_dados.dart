@@ -46,6 +46,13 @@ class MyDados extends StatelessWidget {
                         Text("Meus Dados",
                             textAlign: TextAlign.center,
                             style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    color: Colors.black,
+                                    blurRadius: 2.0,
+                                    offset: Offset(2.0, 2.0),
+                                  ),
+                                ],
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white)),
@@ -57,8 +64,7 @@ class MyDados extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                // ignore: prefer_const_literals_to_create_immutables
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 2, offset: Offset(0, 3), color: Colors.grey)
                 ],
@@ -73,27 +79,17 @@ class MyDados extends StatelessWidget {
                     Expanded(
                       child: SingleChildScrollView(
                         child: DataTable(
-                          columns: <DataColumn>[
+                          columns: const <DataColumn>[
                             DataColumn(
                               label: Expanded(
                                 child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    RichText(
-                                      textAlign: TextAlign.center,
-                                      text: TextSpan(
-                                        text:
-                                            "Registro Acadêmico                    ",
-                                        // ignore: prefer_const_literals_to_create_immutables
-                                        children: <TextSpan>[
-                                          TextSpan(
-                                            text: "10202190882",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    Text('RA'),
+                                    Text("10202190882",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold))
                                   ],
                                 ),
                               ),
@@ -111,26 +107,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Nome                                              ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Felipe Machado da Silva",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Nome'),
+                                      Text("Felipe Machado da Silva",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -147,26 +133,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Data de Nascimento                   ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "10/02/2000",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Data de Nascimento'),
+                                      Text("10/02/2000",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -183,26 +159,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Naturalidade                                ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Porto Alegre",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Naturalidade'),
+                                      Text("Porto Alegre",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -219,27 +185,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Endereço                                      ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text:
-                                                  "Rua Ricardo Barbosa de Oliveira",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Endereço'),
+                                      Text("Rua Ricardo Barbosa de Oliveira",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -256,26 +211,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Bairro                                            ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Maringá",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Bairro'),
+                                      Text("Maringa",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -292,26 +237,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Cidade/UF                                   ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Alvorada",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Cidade UF'),
+                                      Text("Alvorada",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -328,26 +263,94 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "País                                              ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Brasil",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Pais'),
+                                      Text("Brasil",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            DataRow(
+                                color:
+                                    MaterialStateProperty.resolveWith<Color?>(
+                                        (Set<MaterialState> states) {
+                                  if (states.contains(MaterialState.selected)) {
+                                    return Theme.of(context)
+                                        .colorScheme
+                                        .primary
+                                        .withOpacity(0.08);
+                                  }
+                                  return Colors.white; // Use the default value.
+                                }),
+                                cells: const <DataCell>[
+                                  DataCell(
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text('E-mail'),
+                                        Text("felipe.silva@qi.edu.br",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold))
+                                      ],
+                                    ),
+                                  )
+                                ]),
+                            DataRow(
+                                color:
+                                    MaterialStateProperty.resolveWith<Color?>(
+                                        (Set<MaterialState> states) {
+                                  if (states.contains(MaterialState.selected)) {
+                                    return Theme.of(context)
+                                        .colorScheme
+                                        .primary
+                                        .withOpacity(0.08);
+                                  }
+                                  return Colors.white; // Use the default value.
+                                }),
+                                cells: const <DataCell>[
+                                  DataCell(
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text('Telefone'),
+                                        Text("(51) 99999-9999",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold))
+                                      ],
+                                    ),
+                                  )
+                                ]),
+                            DataRow(
+                              color: MaterialStateProperty.resolveWith<Color?>(
+                                  (Set<MaterialState> states) {
+                                if (states.contains(MaterialState.selected)) {
+                                  return Theme.of(context)
+                                      .colorScheme
+                                      .primary
+                                      .withOpacity(0.08);
+                                }
+                                return Colors.white; // Use the default value.
+                              }),
+                              cells: const <DataCell>[
+                                DataCell(
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text('Responsavel Financeiro (RF)'),
+                                      Text("Felipe Machado da Silva",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),
@@ -364,134 +367,16 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: <DataCell>[
+                              cells: const <DataCell>[
                                 DataCell(
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "E-mail                                           ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "felipe.silva@qi.edu.br",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            DataRow(
-                              color: MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
-                                if (states.contains(MaterialState.selected)) {
-                                  return Theme.of(context)
-                                      .colorScheme
-                                      .primary
-                                      .withOpacity(0.08);
-                                }
-                                return Colors.white; // Use the default value.
-                              }),
-                              cells: <DataCell>[
-                                DataCell(
-                                  Row(
-                                    children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Telefone                                   ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "(51) 99999-9999",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            DataRow(
-                              color: MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
-                                if (states.contains(MaterialState.selected)) {
-                                  return Theme.of(context)
-                                      .colorScheme
-                                      .primary
-                                      .withOpacity(0.08);
-                                }
-                                return Colors.white; // Use the default value.
-                              }),
-                              cells: <DataCell>[
-                                DataCell(
-                                  Row(
-                                    children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Responsável Financeiro            ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "Felipe Machado",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            DataRow(
-                              color: MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
-                                if (states.contains(MaterialState.selected)) {
-                                  return Theme.of(context)
-                                      .colorScheme
-                                      .primary
-                                      .withOpacity(0.08);
-                                }
-                                return Colors.white; // Use the default value.
-                              }),
-                              cells: <DataCell>[
-                                DataCell(
-                                  Row(
-                                    children: [
-                                      RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          text:
-                                              "Telefone/Responsável               ",
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: <TextSpan>[
-                                            TextSpan(
-                                              text: "(51) 99999-9999",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      Text('Telefone RF'),
+                                      Text("(51) 99999-9999",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold))
                                     ],
                                   ),
                                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_list/meus_dados.dart';
+import 'package:scroll_list/main.dart';
 import 'package:scroll_list/model/person_.dart';
 import 'package:scroll_list/notas.dart';
 import 'package:scroll_list/quadro.dart';
@@ -14,37 +15,36 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
-    final person = Person("teste");
+    final person = Person(name: "Felipe Silva");
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 70,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back)),
-        centerTitle: true,
-        backgroundColor: const Color.fromRGBO(243, 0, 0, 1),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              "lib/img/logo_qi.png",
-              scale: 2,
-            )
-          ],
-        ),
-      ),
-      body: Container(
-        margin: const EdgeInsets.all(20),
-        child: SingleChildScrollView(
-          child: Column(
+        appBar: AppBar(
+          toolbarHeight: 70,
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back)),
+          centerTitle: true,
+          backgroundColor: const Color.fromRGBO(243, 0, 0, 1),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(
+                "lib/img/logo_qi.png",
+                scale: 2,
+              )
+            ],
+          ),
+        ),
+        body: Container(
+            margin: const EdgeInsets.all(20),
+            child: SingleChildScrollView(
+                child: Column(children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Bem vindo(a), ${person.name}",
+                    person.toString(),
                     style: const TextStyle(fontSize: 24),
                   ),
                 ],
@@ -77,7 +77,18 @@ class _MenuPageState extends State<MenuPage> {
                             MaterialPageRoute(
                                 builder: (context) => const Quadro()));
                       },
-                      child: const Text("QUADRO DE HORÁRIOS"))),
+                      child: const Text(
+                        "QUADRO DE HORÁRIOS",
+                        style: TextStyle(
+                          shadows: [
+                            Shadow(
+                              color: Colors.black,
+                              blurRadius: 2.0,
+                              offset: Offset(2.0, 2.0),
+                            ),
+                          ],
+                        ),
+                      ))),
               Container(
                   width: 200,
                   height: 50,
@@ -99,7 +110,18 @@ class _MenuPageState extends State<MenuPage> {
                             MaterialPageRoute(
                                 builder: (context) => const MyDados()));
                       },
-                      child: const Text("MEUS DADOS"))),
+                      child: const Text(
+                        "MEUS DADOS",
+                        style: TextStyle(
+                          shadows: [
+                            Shadow(
+                              color: Colors.black,
+                              blurRadius: 2.0,
+                              offset: Offset(2.0, 2.0),
+                            ),
+                          ],
+                        ),
+                      ))),
               Container(
                   width: 200,
                   height: 50,
@@ -121,11 +143,18 @@ class _MenuPageState extends State<MenuPage> {
                             MaterialPageRoute(
                                 builder: (context) => const NotasPage()));
                       },
-                      child: const Text("NOTAS E FALTAS"))),
-            ],
-          ),
-        ),
-      ),
-    );
+                      child: const Text(
+                        "NOTAS E FALTAS",
+                        style: TextStyle(
+                          shadows: [
+                            Shadow(
+                              color: Colors.black,
+                              blurRadius: 2.0,
+                              offset: Offset(2.0, 2.0),
+                            ),
+                          ],
+                        ),
+                      )))
+            ]))));
   }
 }

@@ -1,10 +1,10 @@
 class Person {
-
   String? name;
-  
-  Person(String this.name);
+  String? ra;
+  String? password;
+
+  Person({this.name, this.ra, this.password});
 
   @override
-  String toString() => "Seu nome é $name";
-
+  String toString() => "Bem vindo(a) $name!";
 }
