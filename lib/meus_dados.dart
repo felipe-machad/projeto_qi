@@ -1,9 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:scroll_list/model/person_.dart';
 
 class MyDados extends StatelessWidget {
-  const MyDados({super.key});
+  MyDados({super.key});
+
+  static const mockPerson = {
+    'ra': '1',
+    'name': 'Felipe Machado da Silva',
+    'cpf': '111111',
+    'password': '1'
+  };
+  final person = Aluno.fromMap(mockPerson);
 
   @override
   Widget build(BuildContext context) {
@@ -107,14 +116,14 @@ class MyDados extends StatelessWidget {
                                 }
                                 return Colors.white; // Use the default value.
                               }),
-                              cells: const <DataCell>[
+                              cells:  <DataCell>[
                                 DataCell(
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text('Nome'),
-                                      Text("Felipe Machado da Silva",
+                                      Text("${person.name}",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold))
                                     ],

@@ -15,7 +15,15 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
-    final person = Person(name: "Felipe Silva");
+    const mockPerson = {
+      'ra': '1',
+      'name': 'Felipe Machado da Silva',
+      'cpf': '845.909.390-53',
+      'password':'1'
+      
+      
+    };
+    final person = Aluno.fromMap(mockPerson);
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 70,
@@ -108,7 +116,7 @@ class _MenuPageState extends State<MenuPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MyDados()));
+                                builder: (context) =>  MyDados()));
                       },
                       child: const Text(
                         "MEUS DADOS",

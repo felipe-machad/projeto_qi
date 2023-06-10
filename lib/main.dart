@@ -29,7 +29,15 @@ class Projeto extends StatefulWidget {
 class _ProjetoState extends State<Projeto> {
   final TextEditingController _ctrlRa = TextEditingController();
   final TextEditingController _ctrlSenha = TextEditingController();
-  final person = Person(ra: "1", password: "1");
+  static const mockPerson = {
+      'ra': '1',
+      'name': 'Felipe Machado da Silva',
+      'cpf': '111111',
+      'password':'1'
+      
+      
+    };
+  final person = Aluno.fromMap(mockPerson);
 
   String _raFill = "";
   String _passFill = "";
