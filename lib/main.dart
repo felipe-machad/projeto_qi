@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scroll_list/menu.dart';
-import 'model/person_.dart';
+import 'package:scroll_list/widgets/alerts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Projeto QI",
+        title: "Portal do Aluno Mobile",
         theme: ThemeData(primaryColor: const Color.fromARGB(255, 172, 30, 19)),
         home: const Projeto());
   }
@@ -29,15 +28,16 @@ class Projeto extends StatefulWidget {
 class _ProjetoState extends State<Projeto> {
   final TextEditingController _ctrlRa = TextEditingController();
   final TextEditingController _ctrlSenha = TextEditingController();
-  static const mockPerson = {
-      'ra': '1',
-      'name': 'Felipe Machado da Silva',
-      'cpf': '111111',
-      'password':'1'
-      
-      
-    };
-  final person = Aluno.fromMap(mockPerson);
+//  static const mockPerson = {
+//      'ra': '1',
+//      'name': 'Felipe Machado da Silva',
+//      'cpf': '111111',
+//      'password':'1'
+//
+//
+//    };
+  final aluno = MyAlertOk().aluno;
+  
 
   String _raFill = "";
   String _passFill = "";
@@ -48,10 +48,10 @@ class _ProjetoState extends State<Projeto> {
       _passFill = _ctrlSenha.text.isEmpty ? "Preencha esse campo" : "";
     });
 
-    if (person.ra == raAcess && person.password == passwordAcess) {
+    if (aluno.ra == raAcess && aluno.password == passwordAcess) {
       showDialog(
         context: context,
-        builder: (context) => const MyAlertOk(),
+        builder: (context) =>  MyAlertOk(),
       );
     } else {
       showDialog(
@@ -97,10 +97,10 @@ class _ProjetoState extends State<Projeto> {
                             top: 20, right: 20, bottom: 20),
                         padding: const EdgeInsets.only(left: 30),
                         child: TextFormField(
-                          decoration: InputDecoration(
-                              helperText: _passFill, hintText: "Senha"),
-                          controller: _ctrlSenha,
-                        )),
+                            decoration: InputDecoration(
+                                helperText: _passFill, hintText: "Senha"),
+                            controller: _ctrlSenha,
+                            obscureText: true)),
                     ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor: MaterialStateColor.resolveWith(
@@ -116,56 +116,14 @@ class _ProjetoState extends State<Projeto> {
                             "Entrar",
                             textAlign: TextAlign.center,
                           ),
-                        ))
+                        )
+                        )
                   ],
-                ))
-          ])),
-    );
-  }
-}
-
-class MyAlertOk extends StatelessWidget {
-  const MyAlertOk({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      content: const Text("Login Feito com sucesso!"),
-      title: const Icon(Icons.person, color: Colors.red, size: 50),
-      actions: <Widget>[
-        ElevatedButton(
-            style: ButtonStyle(
-                backgroundColor: MaterialStateColor.resolveWith(
-                    (states) => const Color.fromRGBO(243, 0, 0, 1))),
-            onPressed: () {
-              Navigator.of(context).pop();
-
-              //seremos direcionados para outra tela
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const MenuPage()));
-            },
-            child: const Text("Entrar"))
-      ],
-    );
-  }
-}
-
-class MyAlertFail extends StatelessWidget {
-  const MyAlertFail({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      content: const Text("Usuário ou Senha inválidos"),
-      title: const Text("ERRO!"),
-      actions: <Widget>[
-        ElevatedButton(
-            onPressed: () {
-              //seremos direcionados para outra tela
-              Navigator.of(context).pop();
-            },
-            child: const Text("Texto do botão"))
-      ],
+                )
+                )
+          ]
+          )
+      )
     );
   }
 }

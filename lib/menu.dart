@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_list/extensions/teste.dart';
 import 'package:scroll_list/meus_dados.dart';
-import 'package:scroll_list/main.dart';
 import 'package:scroll_list/model/person_.dart';
 import 'package:scroll_list/notas.dart';
 import 'package:scroll_list/quadro.dart';
 
+import 'widgets/alerts.dart';
+
 class MenuPage extends StatefulWidget {
-  const MenuPage({super.key});
+  Aluno aluno;
+   MenuPage({super.key, required this.aluno});
 
   @override
   State<MenuPage> createState() => _MenuPageState();
 }
 
 class _MenuPageState extends State<MenuPage> {
+ final aluno = MyAlertOk().aluno;
   @override
   Widget build(BuildContext context) {
-    const mockPerson = {
-      'ra': '1',
-      'name': 'Felipe Machado da Silva',
-      'cpf': '845.909.390-53',
-      'password':'1'
-      
-      
-    };
-    final person = Aluno.fromMap(mockPerson);
+
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 70,
@@ -52,8 +48,8 @@ class _MenuPageState extends State<MenuPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    person.toString(),
-                    style: const TextStyle(fontSize: 24),
+                    widget.aluno.hello(),
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -61,10 +57,8 @@ class _MenuPageState extends State<MenuPage> {
                   padding: const EdgeInsets.only(bottom: 10),
                   margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Center(
-                      child: Image.asset(
-                    "lib/img/man.png",
-                    scale: 3,
-                  ))),
+                      child: Image.asset("lib/img/man.png",scale: 3 ))
+                ),
               SizedBox(
                   width: 200,
                   height: 50,
@@ -113,10 +107,12 @@ class _MenuPageState extends State<MenuPage> {
                           backgroundColor: MaterialStateColor.resolveWith(
                               (states) => const Color.fromRGBO(243, 0, 0, 1))),
                       onPressed: () {
+                        Aluno aluno = this.aluno;
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>  MyDados()));
+                              
+                                builder: (context) =>  MyDados(aluno: aluno,)));
                       },
                       child: const Text(
                         "MEUS DADOS",
@@ -146,8 +142,11 @@ class _MenuPageState extends State<MenuPage> {
                           backgroundColor: MaterialStateColor.resolveWith(
                               (states) => const Color.fromRGBO(243, 0, 0, 1))),
                       onPressed: () {
+                      
                         Navigator.push(
+                          
                             context,
+                            
                             MaterialPageRoute(
                                 builder: (context) => const NotasPage()));
                       },

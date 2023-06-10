@@ -28,7 +28,7 @@ class Quadro extends StatefulWidget {
 }
 
 class _QuadroState extends State<Quadro> {
-  final curso = Course(nomeCurso: "Técnico de Informatica para internet");
+  final curso = Course();
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class _QuadroState extends State<Quadro> {
                   child: Table(
                     children: [
                       TableRow(children: [
-                        Text("Quadro de horários - ${curso.nomeCurso} ",
+                        Text("Quadro de horários - ${curso.disciplina2}",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 shadows: [
@@ -90,7 +90,7 @@ class _QuadroState extends State<Quadro> {
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 5,
-                        color: Colors.grey,
+                        color: Colors.white,
                         blurStyle: BlurStyle.outer)
                   ],
                 ),
