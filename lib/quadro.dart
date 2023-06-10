@@ -28,17 +28,7 @@ class Quadro extends StatefulWidget {
 }
 
 class _QuadroState extends State<Quadro> {
-  final curso = Course(disciplinas: {
-    1: 'Boas vindas - Informática para internet',
-    2: 'Desenvolvimento de aplicativos I',
-    3: 'Desenvolvimento de aplicativos II',
-    4: 'Desenvolvimento de sistemas web I',
-    5: 'Desenvolvimento de sistemas web II',
-    6: 'Desenvolvimento de sistemas web III',
-    7: 'Sistemas operacionais e redes',
-    8: 'Internet das Coisas',
-    9: 'Análise e qualidade de software'
-  }, nomeCurso: "Técnico de Informatica para internet");
+  final curso = Course(nomeCurso: "Técnico de Informatica para internet");
 
   @override
   Widget build(BuildContext context) {
@@ -184,7 +174,7 @@ class _QuadroState extends State<Quadro> {
                               child: RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(
-                                      text: "${curso.disciplinas[1]} \n",
+                                      text: "${curso.disciplina1} \n",
                                       children: <TextSpan>[
                                         TextSpan(
                                           text: "01/01/2022 até 01/03/2022",
@@ -214,7 +204,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[2]} \n",
+                                        text: "${curso.disciplina2} \n",
                                         children: <TextSpan>[
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -244,7 +234,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[3]} \n",
+                                        text: "${curso.disciplina3} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -273,7 +263,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[4]} \n",
+                                        text: "${curso.disciplina4} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -302,7 +292,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[5]} \n",
+                                        text: "${curso.disciplina5} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -331,7 +321,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "D${curso.disciplinas[6]} \n",
+                                        text: "${curso.disciplina6} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -360,7 +350,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[7]} \n",
+                                        text: "${curso.disciplina7} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -389,7 +379,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[8]} \n",
+                                        text: "${curso.disciplina8} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
@@ -418,7 +408,7 @@ class _QuadroState extends State<Quadro> {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                        text: "${curso.disciplinas[9]} \n",
+                                        text: "${curso.disciplina9} \n",
                                         children: [
                                           TextSpan(
                                             text: "01/01/2022 até 01/03/2022",
